@@ -3,14 +3,9 @@
 		<div class="panel-heading">Categorias</div>
 		<div class="panel-body">
 			<ul>
-				<li><a href="#">TUDO DE LIVROS</a></li>
-				<li><a href="#">LANÇAMENTOS</a></li>
-				<li><a href="#">LANÇAMENTOS INGLÊS</a></li>
-				<li><a href="#">PRÉ VENDA</a></li>
-				<li><a href="#">MAIS VENDIDOS</a></li>
-				<li><a href="#">VOLTA ÀS AULAS</a></li>
-				<li><a href="#">E-BOOKS</a></li>
-				<li><a href="#">AUDIOLIVROS</a></li>
+				<li *ngFor="let categoria of categorias">
+					<a href="categoria/{{categoria.id}}">{{categoria.descricao}}</a>
+				</li>
 			</ul>
 		</div>
 	</div>

@@ -1,12 +1,18 @@
+import { HttpModule } from '@angular/http';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+//Componentes
 import { AppComponent } from './app.component';
 import { CategoriaComponent } from './categoria/categoria.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { BoxComponent } from './box/box.component';
 import { TopoComponent } from './topo/topo.component';
 import { RodapeComponent } from './rodape/rodape.component';
+//Serviços
+import { CategoriaService } from './categoria/categoria.service';
+//Outros
+
 
 @NgModule({
   declarations: [
@@ -18,9 +24,10 @@ import { RodapeComponent } from './rodape/rodape.component';
     RodapeComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [CategoriaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
