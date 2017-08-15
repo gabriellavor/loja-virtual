@@ -1,14 +1,5 @@
 <div id="boxes">
-	<div class="box"></div>
-	<div class="box"></div>
-	<div class="box"></div>
-	<div class="box"></div>
-	<div class="box"></div>
-	<div class="box"></div>
-	<div class="box"></div>
-	<div class="box"></div>
-	<div class="box"></div>
-	<div class="box"></div>
-	<div class="box"></div>
-	<div class="box"></div>
+	<div class="box" *ngFor="let produto of produtos">
+		{{produto.descricao}}
+	</div>
 </div>

@@ -11,6 +11,7 @@ import { TopoComponent } from './topo/topo.component';
 import { RodapeComponent } from './rodape/rodape.component';
 //Serviços
 import { CategoriaService } from './categoria/categoria.service';
+import { BoxService } from './box/box.service';
 //Outros
 
 
@@ -27,7 +28,7 @@ import { CategoriaService } from './categoria/categoria.service';
     BrowserModule,
     HttpModule
   ],
-  providers: [CategoriaService],
+  providers: [CategoriaService,BoxService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

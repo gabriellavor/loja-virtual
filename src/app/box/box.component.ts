@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { BoxService } from './box.service';
 @Component({
   selector: 'app-box',
   templateUrl: './box.component.html',
@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BoxComponent implements OnInit {
 
-  constructor() { }
+  produtos:any;
+
+  constructor(public boxService:BoxService) { }
 
   ngOnInit() {
+    let me = this;
+    this.boxService.getProdutos().subscribe(dados => me.produtos = dados);
   }
 
 }
