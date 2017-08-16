@@ -4,7 +4,7 @@
 		<div class="panel-body">
 			<ul>
 				<li *ngFor="let categoria of categorias">
-					<a href="categoria/{{categoria.id}}">{{categoria.descricao}}</a>
+					<a routerLink="/categoria/{{categoria.id}}">{{categoria.descricao}}</a>
 				</li>
 			</ul>
 		</div>

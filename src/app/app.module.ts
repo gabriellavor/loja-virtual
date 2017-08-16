@@ -12,7 +12,10 @@ import { RodapeComponent } from './rodape/rodape.component';
 //Serviços
 import { CategoriaService } from './categoria/categoria.service';
 import { BoxService } from './box/box.service';
-//Outros
+import { ProdutoComponent } from './produto/produto.component';
+//Rotas
+import { routing } from './app.routing';
+import { PrincipalComponent } from './principal/principal.component';
 
 
 @NgModule({
@@ -22,11 +25,14 @@ import { BoxService } from './box/box.service';
     ToolbarComponent,
     BoxComponent,
     TopoComponent,
-    RodapeComponent
+    RodapeComponent,
+    ProdutoComponent,
+    PrincipalComponent
   ],
   imports: [
     BrowserModule,
-    HttpModule
+    HttpModule,
+    routing
   ],
   providers: [CategoriaService,BoxService],
   bootstrap: [AppComponent]
