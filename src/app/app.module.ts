@@ -11,13 +11,14 @@ import { TopoComponent } from './topo/topo.component';
 import { RodapeComponent } from './rodape/rodape.component';
 //Serviços
 import { CategoriaService } from './categoria/categoria.service';
-import { BoxService } from './box/box.service';
+import { ProdutoService } from './produto/produto.service';
 import { ProdutoComponent } from './produto/produto.component';
 //Rotas
 import { routing } from './app.routing';
 import { PrincipalComponent } from './principal/principal.component';
+import { BuscaProdutosComponent } from './busca-produtos/busca-produtos.component';
 
-
+import { ComboBoxModule } from 'ng2-combobox';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,14 +28,16 @@ import { PrincipalComponent } from './principal/principal.component';
     TopoComponent,
     RodapeComponent,
     ProdutoComponent,
-    PrincipalComponent
+    PrincipalComponent,
+    BuscaProdutosComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
-    routing
+    routing,
+    ComboBoxModule
   ],
-  providers: [CategoriaService,BoxService],
+  providers: [CategoriaService,ProdutoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
