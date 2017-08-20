@@ -24,5 +24,19 @@ export class ProdutoService {
     return this.http.get(me.url+action)
     .map(dados => dados.json())
   }
+
+  getProduto(id:number){
+    let me = this;
+    let action = '/'+id;
+    return this.http.get(me.url+action)
+    .map(dados => dados.json())
+  }
+
+  getProdutosPorCategoria(id_categoria:number){
+    let me = this;
+    let action = '/categoria/'+id_categoria;
+    return this.http.get(me.url+action)
+    .map(dados => dados.json())
+  }
   
 }

@@ -1,5 +1,5 @@
 <div id="boxes">
 	<div class="box" *ngFor="let produto of produtos">
-		{{produto.descricao}}
+		<a routerLink="/produto/{{produto.id}}">{{produto.descricao}}</a>
 	</div>
 </div>

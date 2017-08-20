@@ -1,6 +1,7 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ProdutoService } from './../produto/produto.service';
 import { Produtos } from '../models/produtos';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-busca-produtos',
@@ -12,14 +13,14 @@ import { Produtos } from '../models/produtos';
 
 export class BuscaProdutosComponent implements OnInit {
   produtos: Produtos[];
-  
-  constructor(public produtoService:ProdutoService) {
+  @Output()
+  select:EventEmitter<string>;
+    
+  constructor(public produtoService:ProdutoService,private router : Router) {
     this.produtos = [];
   }
   
-  ngOnInit() {
-    
-  }
+  ngOnInit() {}
 
   buscaProdutos(descricao:string){
     let me = this;
@@ -28,4 +29,9 @@ export class BuscaProdutosComponent implements OnInit {
     }
   }
 
+  onSelect(produto:any){
+    if(produto != null){
+      this.router.navigate(['produto',produto.id]);
+    }
+  }
 }

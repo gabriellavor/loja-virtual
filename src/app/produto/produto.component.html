@@ -1,1 +1,12 @@
-Produto
+<app-categoria></app-categoria>
+<div id="conteudo" class="col-xs-9">
+  <app-toolbar></app-toolbar>
+  <div *ngIf="produto.id > 0">
+    <h1>{{produto.id}}</h1>
+    <h1>{{produto.descricao}}</h1>
+    <h1>{{produto.id_categoria}}</h1>
+  </div>
+  <div *ngIf="produto.id == undefined">
+      <app-erro404></app-erro404>
+  </div>
+</div>

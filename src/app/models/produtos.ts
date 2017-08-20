@@ -1,4 +1,6 @@
 export class Produtos{
-    id:number;
-    descricao:string;
+    constructor(
+        id?:number,
+        descricao?:string
+    ){}
 }
