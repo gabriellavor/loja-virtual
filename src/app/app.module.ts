@@ -20,6 +20,7 @@ import { BuscaProdutosComponent } from './busca-produtos/busca-produtos.componen
 
 import { ComboBoxModule } from 'ng2-combobox';
 import { Erro404Component } from './erro404/erro404.component';
+import { ProdutoCategoriaComponent } from './produto-categoria/produto-categoria.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +32,8 @@ import { Erro404Component } from './erro404/erro404.component';
     ProdutoComponent,
     PrincipalComponent,
     BuscaProdutosComponent,
-    Erro404Component
+    Erro404Component,
+    ProdutoCategoriaComponent
   ],
   imports: [
     BrowserModule,

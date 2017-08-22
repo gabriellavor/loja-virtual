@@ -1,5 +1,6 @@
 import { CategoriaService } from './categoria.service';
 import { Component, OnInit } from '@angular/core';
+
 import 'rxjs/add/operator/map';
 @Component({
   selector: 'app-categoria',
@@ -10,6 +11,7 @@ import 'rxjs/add/operator/map';
 export class CategoriaComponent implements OnInit {
 
   categorias:any;
+  produtos:any;
 
   constructor(public categoriaService:CategoriaService){}
 
@@ -17,5 +19,6 @@ export class CategoriaComponent implements OnInit {
     let me = this;
     this.categoriaService.getCategorias().subscribe(dados => me.categorias = dados);
   }
+
 
 }

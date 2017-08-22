@@ -1,0 +1,12 @@
+<app-categoria></app-categoria>
+<div id="conteudo" class="col-xs-9">
+  <app-toolbar></app-toolbar>
+  <div *ngIf="produtos == undefined || produtos.length == 0">
+      <app-erro404></app-erro404>
+  </div>
+  <div id="boxes">
+    <div class="box" *ngFor="let produto of produtos">
+      <a routerLink="/produto/{{produto.id}}">{{produto.descricao}}</a>
+    </div>
+  </div>
+</div>
