@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./principal.component.css']
 })
 export class PrincipalComponent implements OnInit {
-
+  
+  valorLista : boolean = false;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onMudouStatus(evento){
+    this.valorLista = evento;
   }
 
 }

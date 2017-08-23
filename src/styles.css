@@ -110,5 +110,13 @@ ul li a:hover{
 	width: 220px;
 	height: 300px;
 	float: left;
-	background-color: #DDD;
+	background-color: #C39898;
+}
+
+.lista{
+	margin: 0 12px 10px 0px;
+	width: 220px;
+	height: 300px;
+	float: left;
+	background-color: #8E0909;
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ProdutoService } from './../produto/produto.service';
 @Component({
   selector: 'app-box',
@@ -8,6 +8,7 @@ import { ProdutoService } from './../produto/produto.service';
 export class BoxComponent implements OnInit {
 
   produtos:any;
+  @Input() lista: boolean = false;
 
   constructor(public produtoService:ProdutoService) { }
 

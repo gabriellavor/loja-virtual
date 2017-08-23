@@ -1,5 +1,5 @@
 <app-categoria></app-categoria>
 <div id="conteudo" class="col-xs-9">
-  <app-toolbar></app-toolbar>
-  <app-box></app-box>
-</div>
+  <app-toolbar (mudouStatus)="onMudouStatus($event)"></app-toolbar>
+  <app-box [lista]="valorLista"></app-box>
+</div> 
